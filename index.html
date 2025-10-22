@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marwan Nasser Ali - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Profile */
+        .profile {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+        
+        /* Education */
+        .edu-item, .cert-item {
+            margin-bottom: 15px;
+        }
+        
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        
+        .edu-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        
+        .edu-date {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .edu-details {
+            font-size: 14px;
+            color: #555;
+            margin-left: 15px;
+        }
+        
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-left: 15px;
+        }
+        
+        .cert-item {
+            font-size: 14px;
+            color: #555;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .cert-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        /* Awards */
+        .award-item {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .award-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+        
+        .award-achievement {
+            font-size: 14px;
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+        
+        .award-date {
+            font-size: 13px;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+        
+        .award-description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        /* Experience */
+        .exp-item {
+            margin-bottom: 20px;
+        }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+        
+        .exp-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+        }
+        
+        .exp-date {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .exp-company {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+        }
+        
+        .exp-duties {
+            list-style: none;
+            padding-left: 15px;
+        }
+        
+        .exp-duties li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .exp-duties li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .skill-category {
+            margin-bottom: 10px;
+        }
+        
+        .skill-category-title {
+            font-weight: bold;
+            font-size: 15px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .skill-list {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.8;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>MARWAN NASSER ALI</h1>
+            <div class="subtitle">High School Student | Robotics Enthusiast | Programming Trainer</div>
+            <div class="contact-info">
+                <span>📞 01277249685</span>
+                <span>✉️ nasrlymrwan@gmail.com</span>
+                <span>📍 El Souf, Alexandria, Egypt</span>
+                <span>🎂 15/11/2008</span>
+            </div>
+        </div>
+
+        <!-- Profile -->
+        <div class="section">
+            <div class="section-title">Profile</div>
+            <div class="profile">
+                Passionate and accomplished high school student with extensive experience in robotics, programming, and technology education. Proven track record of excellence in international robotics competitions, achieving top rankings in Egypt and globally. Skilled in designing, building, and programming robots, with hands-on experience in teaching and mentoring students. Holder of multiple Cisco certifications in programming and cybersecurity. Seeking opportunities to apply technical expertise and contribute to innovative technology projects while continuing professional development.
+            </div>
+        </div>
+
+        <!-- Education & Certifications -->
+        <div class="section">
+            <div class="section-title">Education & Certifications</div>
+            
+            <div class="edu-item">
+                <div class="edu-header">
+                    <div class="edu-title">El Motaheda 2 Official Language School</div>
+                    <div class="edu-date">Expected Graduation: 2027</div>
+                </div>
+                <div class="edu-details">Currently in Second Year of Secondary School</div>
+            </div>
+            
+            <div class="edu-item">
+                <div class="edu-title" style="margin-bottom: 10px;">Cisco Networking Academy Certifications</div>
+                <div class="cert-grid">
+                    <div class="cert-item">GET CONNECTED</div>
+                    <div class="cert-item">Introduction to Cybersecurity</div>
+                    <div class="cert-item">PCAP: Python Programming Fundamentals</div>
+                    <div class="cert-item">Cybersecurity Essentials</div>
+                    <div class="cert-item">JavaScript Essentials (JSE)</div>
+                    <div class="cert-item">Networking Academy Orientation</div>
+                    <div class="cert-item">Introduction to IoT</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Awards & Achievements -->
+        <div class="section">
+            <div class="section-title">Awards & Achievements</div>
+            
+            <div class="award-item">
+                <div class="award-title">RC Sumo Competition</div>
+                <div class="award-achievement">🏆 3rd Place in Egypt | 7th Place Globally (China)</div>
+                <div class="award-date">2023-2024</div>
+                <div class="award-description">Designed and programmed a robot to compete in sumo wrestling challenges, pushing opponents out of the ring</div>
+            </div>
+            
+            <div class="award-item">
+                <div class="award-title">Minesweeper Robot Competition</div>
+                <div class="award-achievement">🏆 2nd Place in Egypt | 4th Place Globally (Maryland, USA)</div>
+                <div class="award-date">2022-2023</div>
+                <div class="award-description">Developed a land-based robot for detecting mines in El Alamein</div>
+            </div>
+            
+            <div class="award-item">
+                <div class="award-title">SeaPerch Underwater Robotics</div>
+                <div class="award-achievement">🏆 3rd Place in North Africa (out of 50 teams) | 15th Place Globally (Online due to COVID-19)</div>
+                <div class="award-date">2020-2021</div>
+                <div class="award-description">Built an underwater ROV (Remotely Operated Vehicle) submarine to detect underwater mines</div>
+            </div>
+            
+            <div class="award-item">
+                <div class="award-title">Young Innovator Competition</div>
+                <div class="award-achievement">🏆 1st Place - District Level | 2nd Place - Alexandria Governorate</div>
+                <div class="award-date">2024</div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">Experience</div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Computer Technician</div>
+                    <div class="exp-date">2024 - Sep 2024</div>
+                </div>
+                <div class="exp-company">Computer Repair Shop, Alexandria</div>
+                <ul class="exp-duties">
+                    <li>Diagnosed and repaired hardware and software issues for computers and laptops</li>
+                    <li>Performed system upgrades, installations, and maintenance</li>
+                    <li>Provided technical support and guidance to customers</li>
+                </ul>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Robotics Teaching Assistant</div>
+                    <div class="exp-date">2023 - 2024</div>
+                </div>
+                <div class="exp-company">Jupiter Academy, Alexandria</div>
+                <ul class="exp-duties">
+                    <li>Assisted lead instructor in preparing presentations and lesson materials</li>
+                    <li>Delivered lectures and hands-on training sessions to students</li>
+                    <li>Mentored competition teams, with one team achieving 1st place under my guidance</li>
+                    <li>Provided individual support to students in robotics design and programming</li>
+                </ul>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Course Coordinator</div>
+                    <div class="exp-date">2023 - Present</div>
+                </div>
+                <div class="exp-company">Cisco Technology Development Center</div>
+                <ul class="exp-duties">
+                    <li>Organized and coordinated Cisco certification courses and training programs</li>
+                    <li>Assisted in course preparation and logistics management</li>
+                    <li>Supported students throughout their certification journey</li>
+                </ul>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Programming Workshop Trainer</div>
+                    <div class="exp-date">2022 - Present</div>
+                </div>
+                <div class="exp-company">M Code Team</div>
+                <ul class="exp-duties">
+                    <li>Conducted workshops teaching Python programming and Artificial Intelligence fundamentals</li>
+                    <li>Trained students on electrical circuits design and robotics engineering</li>
+                    <li>Developed engaging curriculum materials and hands-on projects</li>
+                    <li>Mentored students in practical applications of programming and robotics</li>
+                </ul>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Freelance Video Editor</div>
+                    <div class="exp-date">2021 - 2023</div>
+                </div>
+                <div class="exp-company">Upwork</div>
+                <ul class="exp-duties">
+                    <li>Provided professional video editing services for international clients</li>
+                    <li>Edited promotional videos, educational content, and social media content</li>
+                    <li>Delivered high-quality projects within deadlines and client specifications</li>
+                </ul>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Freelance Scriptwriter</div>
+                    <div class="exp-date">2021 - 2023</div>
+                </div>
+                <div class="exp-company">Mostaql (مستقل)</div>
+                <ul class="exp-duties">
+                    <li>Wrote creative scripts for various media projects</li>
+                    <li>Collaborated with clients to develop engaging content</li>
+                    <li>Delivered original and compelling narratives for diverse audiences</li>
+                </ul>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Event Organizer - Capstone Projects</div>
+                    <div class="exp-date">2022 - 2023</div>
+                </div>
+                <div class="exp-company">Discovery Center & Bibliotheca Alexandrina</div>
+                <ul class="exp-duties">
+                    <li>Organized and coordinated Capstone project exhibitions at two major venues</li>
+                    <li>Managed event logistics, scheduling, and participant coordination</li>
+                    <li>Facilitated student presentations and demonstrations</li>
+                    <li>Received official recognition certificate from Discovery Center for outstanding contribution</li>
+                </ul>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Technical Apprentice</div>
+                    <div class="exp-date">2017 - 2018</div>
+                </div>
+                <div class="exp-company">Electrical Shop, Alexandria</div>
+                <ul class="exp-duties">
+                    <li>Learned electrical wiring, circuit troubleshooting, and safety procedures</li>
+                    <li>Assisted in electrical installations and repairs</li>
+                </ul>
+            </div>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Workshop Apprentice</div>
+                    <div class="exp-date">2016 - 2017</div>
+                </div>
+                <div class="exp-company">Carpentry Workshop, Alexandria</div>
+                <ul class="exp-duties">
+                    <li>Developed practical hands-on skills in woodworking and tool usage</li>
+                    <li>Learned basic carpentry techniques and safety practices</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="section">
+            <div class="section-title">Languages</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-list">
+                        <strong>Arabic:</strong> Native<br>
+                        <strong>English:</strong> Intermediate<br>
+                        <strong>French:</strong> Basic
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">Skills</div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-title">Programming & Development</div>
+                    <div class="skill-list">
+                        • Python Programming<br>
+                        • JavaScript<br>
+                        • Application Development<br>
+                        • Game Development<br>
+                        • Artificial Intelligence Basics
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Robotics & Engineering</div>
+                    <div class="skill-list">
+                        • Robot Design & Development<br>
+                        • Electrical Circuits<br>
+                        • Sensor Integration<br>
+                        • Autonomous Systems<br>
+                        • Hardware Troubleshooting
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Technology & Networks</div>
+                    <div class="skill-list">
+                        • Cybersecurity Fundamentals<br>
+                        • Internet of Things (IoT)<br>
+                        • Computer Repair & Maintenance<br>
+                        • System Installation & Upgrades
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <div class="skill-category-title">Professional Skills</div>
+                    <div class="skill-list">
+                        • Leadership & Team Management<br>
+                        • Training & Mentoring<br>
+                        • Event Organization<br>
+                        • Graphic Design<br>
+                        • Problem Solving
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
